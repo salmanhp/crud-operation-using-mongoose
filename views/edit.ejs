@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="text-center m-4"><%= title %></h1>
+    
+    <form action="/update/" method="post">
+      <input type="hidden" name="id" value="<%= records._id %>" />
+      <div class="form-group w-50 offset-2">
+        <input type="text" class="form-control" name="name" value="<%= records.name %>" placeholder="Name">
+      </div>
+      
+      <div class="form-group w-50 offset-2">
+        <input type="email" class="form-control" name="email" value="<%= records.email %>" placeholder="Email address"> 
+      </div>
+
+      <div class="form-group  w-50 offset-2">
+        <select class="form-control" name="etype">
+          <option value="Hourly" <% if(records.etype == "Hourly"){%> selected <%} %> >Hourly</option>
+          <option value="Fixed" <% if(records.etype == "Fixed"){%> selected <%} %> >Fixed</option>
+        </select>
+      </div>
+
+      <div class="form-group  w-50 offset-2">       
+        <input type="text" class="form-control" name="hourlyrate" value="<%= records.hourlyrate %>" placeholder="Hourly Rate">
+      </div>
+
+      <div class="form-group  w-50 offset-2">
+        <input type="text" class="form-control" name="totalhour" value="<%= records.totalhour %>" placeholder="Total Hours">
+      </div>
+
+      
+      <button type="submit" class="btn btn-primary offset-2">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
+

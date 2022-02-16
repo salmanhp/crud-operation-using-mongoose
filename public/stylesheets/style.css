@@ -1,0 +1,31 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+p{
+  text-align: center;
+}
+h1{
+  text-align: center;
+}
+
+/* section{
+  position: absolute;
+  left: 38%;
+} */
+
+/* section form {
+  position: relative;
+  top: 50px;
+} */
+
+
+/* .Display td  {
+  border: 1px solid black;
+} */
+
